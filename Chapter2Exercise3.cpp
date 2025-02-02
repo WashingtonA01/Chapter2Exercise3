@@ -3,9 +3,7 @@ Filename: Chapter2Exercise3
 Title: Sales Tax
 Programmer: Arianna Washington
 Date: 29JAN2025
-Requirements: Write a program that will compute the total 
-sales tax on a $95 dollar purchase. Assume the state sales
-tax is 4 percent, and the country sales tax is 2 percent.
+Requirements: User input of total paid in taxes on a purchase.
 */
 //
 
@@ -14,12 +12,23 @@ using namespace std;
 
 int main()
 {
-    int price = 95;
-    float statesalestax = .04;
-    float countysalestax = .02;
+    float price, countysalestax, statesalestax;
+
+    cout << "How much was the total of your purchase?";
+    cin >> price; 
+
+    cout << "How much is your state sales tax?";
+    cin >> statesalestax; 
+
+    cout << "How much is your county sales tax?";
+    cin >> countysalestax;
+  
+   
     float totalsalestax = statesalestax + countysalestax;
-    float totaltaxpaid = totalsalestax * price;
-     std : cout << "On a $95 dollar purchase, you will pay" << " " << totaltaxpaid << " " << "dollars in taxes.";
+    float taxpercentage = totalsalestax / 100;
+    float totaltaxpaid = taxpercentage * price;
+
+    cout << "Total taxes to be paid on your purchase:" << " " << totaltaxpaid <<" " << "dollars";
 
 
 }
